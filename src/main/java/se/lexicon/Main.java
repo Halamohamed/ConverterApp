@@ -9,6 +9,7 @@ public class Main {
         CurrencyConverter currencyConverter = new CurrencyConverter();
         LengthConverter lengthConverter = new LengthConverter();
         TemperatureConverter temperatureConverter = new TemperatureConverter();
+        BmiCalculator bmiCalculator = new BmiCalculator();
 
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -19,7 +20,8 @@ public class Main {
             IO.println("1- Currency converter");
             IO.println("2- Length converter");
             IO.println("3- Temperature converter ");
-            IO.println("4- Exit");
+            IO.println("4- BMI converter ");
+            IO.println("5- Exit");
             while (!scanner.hasNextInt()) {
                 IO.println("Invalid input. Please enter a number.");
                 scanner.next();
@@ -33,13 +35,15 @@ public class Main {
                 break;
                 case 3 : temperatureConverter.menu();
                 break;
-                case 4 : IO.println("Exiting ...");
+                case 4 : bmiCalculator.menu();
+                break;
+                case 5 : IO.println("Exiting ...");
                 break;
                 default: IO.println("Invalid choice. Try again.");
                 break;
             }
 
-        }while (choice != 4);
+        }while (choice != 5);
          scanner.close();
     }
 }
