@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
     static void main() {
         CurrencyConverter currencyConverter = new CurrencyConverter();
+        LengthConverter lengthConverter = new LengthConverter();
 
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -15,7 +16,7 @@ public class Main {
          do {
             IO.println("Choose an option menu");
             IO.println("1- Currency converter");
-            IO.println("2- converter 2");
+            IO.println("2- Length converter");
             IO.println("3- Converter 3");
             IO.println("4- Exit");
             while (!scanner.hasNextInt()) {
@@ -27,6 +28,7 @@ public class Main {
             switch (choice) {
                 case 1 : currencyConverter.menu();
                 break;
+                case 2 : lengthConverter.menu();
                 case 4 : IO.println("Exiting ...");
                 break;
                 default: IO.println("Invalid choice. Try again.");
