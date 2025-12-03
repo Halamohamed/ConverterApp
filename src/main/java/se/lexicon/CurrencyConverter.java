@@ -2,6 +2,8 @@ package se.lexicon;
 
 import java.util.Scanner;
 
+import static se.lexicon.LengthConverter.getTime;
+
 public class CurrencyConverter {
     Scanner scanner = new Scanner(System.in);
 
@@ -13,6 +15,8 @@ public class CurrencyConverter {
         double euro = amount * 0.091;
         IO.println("Result: " + amount + " SEK = " + usd + " USD");
         IO.println("Result: " + amount + " SEK = " + euro + " EUR");
+
+        IO.println("Converted at: " + getTime());
     }
 
 
