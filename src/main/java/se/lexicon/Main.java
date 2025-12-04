@@ -40,7 +40,8 @@ public class Main {
             IO.println("6- Weight converter");
             IO.println("7- Time converter");
             IO.println("8- Speed converter");
-            IO.println("9- Exit");
+            IO.println("9- Fuel Consumption converter");
+            IO.println("10- Exit");
             while (!scanner.hasNextInt()) {
                 IO.println("Invalid input. Please enter a number.");
                 scanner.next();
@@ -75,6 +76,9 @@ public class Main {
                     temperatureConverter.speedConverter();
                     break;
                 case 9:
+                    weightConverter.fuelConsumptionConverter();
+                    break;
+                case 10:
                     IO.println("Exiting ... Converter App");
                     break;
                 default:
@@ -82,7 +86,7 @@ public class Main {
                     break;
             }
 
-        } while (choice != 9);
+        } while (choice != 10);
         scanner.close();
     }
 }
