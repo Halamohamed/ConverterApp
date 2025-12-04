@@ -38,7 +38,9 @@ public class Main {
             IO.println("4- BMI converter ");
             IO.println("5- DataStorage converter");
             IO.println("6- Weight converter");
-            IO.println("7- Exit");
+            IO.println("7- Time converter");
+            IO.println("8- Speed converter");
+            IO.println("9- Exit");
             while (!scanner.hasNextInt()) {
                 IO.println("Invalid input. Please enter a number.");
                 scanner.next();
@@ -67,6 +69,12 @@ public class Main {
                     weightConverter.menu();
                     break;
                 case 7:
+                    weightConverter.TimeConverter();
+                    break;
+                case 8:
+                    temperatureConverter.speedConverter();
+                    break;
+                case 9:
                     IO.println("Exiting ... Converter App");
                     break;
                 default:
@@ -74,7 +82,7 @@ public class Main {
                     break;
             }
 
-        } while (choice != 7);
+        } while (choice != 9);
         scanner.close();
     }
 }

@@ -18,4 +18,11 @@ public class TemperatureConverter {
         IO.println("Converted at:"  + getTime());
 
     }
+    public void speedConverter(){
+        IO.println("Enter km/h to convert to m/s");
+        double kmh = scanner.nextDouble();
+        double meterPerSecond = kmh / 3.6;
+        IO.println( kmh + " km/h = " + meterPerSecond + " m/s");
+        IO.println("Converted at: " + getTime());
+    }
 }
